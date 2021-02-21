@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(188, 231, 160);
+}
+
+
+header{
+    background-image: url(./assets/Header\ Image.png);
+    height: 460px;
+    width: 1600px;
+}
+
+
+body{
+	margin-left:15%;
+    margin-right: 15%;
+	padding:0;
+	background-color: rgb(188, 231, 160);
+	font-family: 'Raleway',sans-serif;
+	color: black;
+}
+.banner{
+	height: 100vh;
+	width: 100%;
+    background-color: rgb(188, 231, 160);
+	background-position: top;
+	
+}
+.banner .navbar{
+	margin-top:2%;
+}
+.banner .navbar-brand{
+	color: rgb(199, 49, 49);
+	font-size:1.8em;
+	font-weight: 700;
+	margin-left: 10%;
+}
+.banner .nav{
+	margin-right:10%; 
+}
+.banner .nav li a{
+	color:#aaa;
+	font-size: 1.2em;
+}
+.banner .info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.banner .info h1{
+	font-size: 2.5em;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.banner .info p{
+	font-size: 2em;
+	font-weight: 500;
+	color: #aaa;
+	letter-spacing: 2px;
+}
+.banner .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	color: #fff;
+	background: #e91d43;
+	padding:10px 20px; 
+	font-size: 2em;
+	font-weight: 600;
+}
+.banner .info a:hover{
+	background: #e91e63;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .services, .skills, .teams, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content, 
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+
+.slideshow {
+	background-color: #fff;
+}
+
+.slideshow img {
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 1000px;
+	width: 500px;
+	height: 500px;
+	animation-name: fade-out;
+	animation-duration: 8s;
+	animation-direction: alternate;
+}
+
+.slideshow img:nth-child(1) {
+	animation-delay: 10s;
+}
+.slideshow img:nth-child(2) {
+	animation-delay: 5s;
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;	
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+
+.slideshows {
+	background-color: #fff;
+}
+
+.slideshows img {
+	position: absolute;
+	margin-top: 700px;
+	margin-left: 1000px;
+	width: 500px;
+	height: 500px;
+	animation-name: fade-out;
+	animation-duration: 8s;
+	animation-direction: alternate;
+}
+
+.slideshows img:nth-child(1) {
+	animation-delay: 10s;
+}
+.slideshows img:nth-child(2) {
+	animation-delay: 5s;
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;	
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+.slideshowss {
+	background-color: #fff;
+}
+
+.slideshowss img {
+	position: absolute;
+	margin-top: 1300px;
+	margin-left: 1000px;
+	width: 500px;
+	height: 500px;
+	animation-name: fade-out;
+	animation-duration: 8s;
+	animation-direction: alternate;
+}
+
+.slideshowss img:nth-child(1) {
+	animation-delay: 10s;
+}
+.slideshowss img:nth-child(2) {
+	animation-delay: 5s;
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;	
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
+
+
+
+
+.Wasting{
+	font-size: 20px;
+	margin-left: 40px;
+	margin-top: 100px;
+	color: rgb(66, 90, 46);
+	font-family: 'Lato', sans-serif;
+}
+
+.Effects{
+	font-size: 20px;
+	margin-left: 40px;
+	margin-top: 350px;
+	color: rgb(66, 90, 46);
+	font-family: 'Lato', sans-serif;
+}
+
+.Prevention{
+	font-size: 20px;
+	margin-left: 40px;
+	margin-top: 300px;
+	color: rgb(66, 90, 46);
+	font-family: 'Lato', sans-serif;
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: rgb(50, 78, 60); /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+	background-color: #555; /* Add a dark-grey background on hover */
+  }
+  
+
+  @media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+
+
+
+
